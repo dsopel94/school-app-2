@@ -12,7 +12,7 @@
     "format": "prettier --trailing-comma es5 --single-quote --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
     "precommit": "lint-staged"
   },
-  "proxy": "http://localhost:3001/",
+  "proxy": "https://desolate-peak-57738.herokuapp.com/",
   "engines": {
     "node": "6.11.0",
     "npm": "3.10.10"
