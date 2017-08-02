@@ -22,7 +22,7 @@ import axios from 'axios';
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
-const API_URL = 'http://localhost:3001/api';
+const API_URL = 'https://desolate-peak-57738.herokuapp.com/api';
 
 export function errorHandler(dispatch, error, type) {
   let errorMessage = '';
@@ -50,23 +50,27 @@ export function errorHandler(dispatch, error, type) {
 
 export function getCourse(cuid) {
   return function(dispatch) {
-    axios.get(`http://localhost:3001/courses/${cuid}`).then(response => {
-      dispatch({
-        type: GET_COURSE,
-        payload: response.data.course,
+    axios
+      .get(`https://desolate-peak-57738.herokuapp.com/courses/${cuid}`)
+      .then(response => {
+        dispatch({
+          type: GET_COURSE,
+          payload: response.data.course,
+        });
       });
-    });
   };
 }
 
 export function getCourses() {
   return function(dispatch) {
-    axios.get('http://localhost:3001/courses').then(response => {
-      dispatch({
-        type: GET_COURSES,
-        payload: response.data.courses,
+    axios
+      .get('https://desolate-peak-57738.herokuapp.com/courses')
+      .then(response => {
+        dispatch({
+          type: GET_COURSES,
+          payload: response.data.courses,
+        });
       });
-    });
   };
 }
 
@@ -81,60 +85,70 @@ export function setAsAuthenticated() {
 
 export function getStudents() {
   return function(dispatch) {
-    axios.get('http://localhost:3001/students').then(response => {
-      dispatch({
-        type: GET_STUDENTS,
-        payload: response.data.students,
+    axios
+      .get('https://desolate-peak-57738.herokuapp.com/students')
+      .then(response => {
+        dispatch({
+          type: GET_STUDENTS,
+          payload: response.data.students,
+        });
       });
-    });
   };
 }
 
 export function getStudent(id) {
   return function(dispatch) {
-    axios.get(`http://localhost:3001/students/${id}`).then(response => {
-      console.log(response.data, "What's going on here?");
-      dispatch({
-        type: GET_STUDENT,
-        payload: response.data.student,
+    axios
+      .get(`https://desolate-peak-57738.herokuapp.com/students/${id}`)
+      .then(response => {
+        console.log(response.data, "What's going on here?");
+        dispatch({
+          type: GET_STUDENT,
+          payload: response.data.student,
+        });
       });
-    });
   };
 }
 
 export function deleteStudent(id) {
   return function(dispatch) {
-    axios.delete(`http://localhost:3001/students/${id}`).then(response => {});
+    axios
+      .delete(`https://desolate-peak-57738.herokuapp.com/students/${id}`)
+      .then(response => {});
   };
 }
 
 export function deleteCourse(id) {
   return function(dispatch) {
-    axios.delete(`http://localhost:3001/courses/${id}`).then(response => {
-      window.location.href = 'http://localhost:3000/auth/dashboard';
-      dispatch({
-        type: GET_COURSES,
-        payload: response.data.courses,
+    axios
+      .delete(`https://desolate-peak-57738.herokuapp.com/courses/${id}`)
+      .then(response => {
+        window.location.href = 'http://localhost:3000/auth/dashboard';
+        dispatch({
+          type: GET_COURSES,
+          payload: response.data.courses,
+        });
       });
-    });
   };
 }
 
 export function addPeriod(number) {
   return function(dispatch) {
-    axios.post('http://localhost:3001/periods').then(response => {
-      dispatch({
-        type: ADD_COURSE,
-        payload: response.data.periods,
+    axios
+      .post('https://desolate-peak-57738.herokuapp.com/periods')
+      .then(response => {
+        dispatch({
+          type: ADD_COURSE,
+          payload: response.data.periods,
+        });
       });
-    });
   };
 }
 
 export function editCourse(coursename, id) {
   return function(dispatch) {
     axios
-      .put(`http://localhost:3001/courses/${id}`, {
+      .put(`https://desolate-peak-57738.herokuapp.com/courses/${id}`, {
         name: coursename,
       })
       .then(response => {
@@ -153,7 +167,7 @@ export const registerUser = (
   return function(dispatch) {
     console.log('This is getting called!');
     axios
-      .post('http://localhost:3001/api/auth/register', {
+      .post('https://desolate-peak-57738.herokuapp.com/api/auth/register', {
         username: username,
         fullName: fullName,
         password: password,
@@ -180,7 +194,7 @@ export const addStudent = (
 ) => {
   return function(dispatch) {
     axios
-      .post(`http://localhost:3001/students`, {
+      .post(`https://desolate-peak-57738.herokuapp.com/students`, {
         firstName: firstName,
         lastName: lastName,
         phoneNumber: phoneNumber,
@@ -215,7 +229,7 @@ export const editStudent = (
 ) => {
   return function(dispatch) {
     axios
-      .put(`http://localhost:3001/students/${id}`, {
+      .put(`https://desolate-peak-57738.herokuapp.com/students/${id}`, {
         firstName: firstName,
         lastName: lastName,
         phoneNumber: phoneNumber,
@@ -260,11 +274,11 @@ export const loginUser = (username, password) => {
       });
   };
 };
-//http://localhost:3001/courses
+//https://desolate-peak-57738.herokuapp.com/courses
 export const addCourse = (name, instructor) => {
   return function(dispatch) {
     axios
-      .post(`http://localhost:3001/courses`, {
+      .post(`https://desolate-peak-57738.herokuapp.com/courses`, {
         name: name,
         _creator: instructor,
         periods: [],
