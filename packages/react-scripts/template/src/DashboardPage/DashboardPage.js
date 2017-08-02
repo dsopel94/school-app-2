@@ -31,7 +31,7 @@ class DashboardPage extends React.Component {
     this.setState({
       authenticated: false,
     });
-    window.location.href = `http://localhost:3000/login`;
+    window.location.href = `https://young-mountain-65748.herokuapp.com/login`;
   }
 
   componentDidMount() {
@@ -48,7 +48,7 @@ class DashboardPage extends React.Component {
   }
   render() {
     if (!this.state.authenticated) {
-      window.location.href = `http://localhost:3000/login`;
+      window.location.href = `https://young-mountain-65748.herokuapp.com/login`;
     }
     console.log(this.state.authenticated, 'that the user is authenticated');
     let inst = cookies.get('instructor').fullName;

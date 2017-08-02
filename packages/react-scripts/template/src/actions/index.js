@@ -123,7 +123,7 @@ export function deleteCourse(id) {
     axios
       .delete(`https://desolate-peak-57738.herokuapp.com/courses/${id}`)
       .then(response => {
-        window.location.href = 'http://localhost:3000/auth/dashboard';
+        window.location.href = 'https://young-mountain-65748.herokuapp.com/auth/dashboard';
         dispatch({
           type: GET_COURSES,
           payload: response.data.courses,
@@ -153,7 +153,7 @@ export function editCourse(coursename, id) {
       })
       .then(response => {
         console.log(response.data.courses);
-        window.location.href = `http://localhost:3000/courses/${response.data.courses._id}`;
+        window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${response.data.courses._id}`;
       });
   };
 }
@@ -174,7 +174,7 @@ export const registerUser = (
       })
       .then(res => {
         // cookie.save('token', res.data.token, { path: '/' });
-        window.location.href = 'http://localhost:3000/login';
+        window.location.href = 'https://young-mountain-65748.herokuapp.com/login';
         // dispatch({ type: REGISTER_USER_SUCCESS });
       })
       .catch(error => {
@@ -212,7 +212,7 @@ export const addStudent = (
           streetAddress: streetAddress,
           miscAddress: miscAddress,
         });
-        window.location.href = `http://localhost:3000/courses/${courses}`;
+        window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${courses}`;
         console.log(window.location.href);
         console.log(response.data.students, 'Student response');
       });
@@ -238,7 +238,7 @@ export const editStudent = (
       })
       .then(response => {
         console.log(response.data.students, 'Checking after put');
-        window.location.href = `http://localhost:3000/courses/${response.data.students.courses}`;
+        window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${response.data.students.courses}`;
       });
   };
 };
@@ -263,7 +263,7 @@ export const loginUser = (username, password) => {
           type: LOGIN_USER_SUCCESS,
           fullName: response.data.instructor.fullName,
         });
-        //window.location.href = 'http://localhost:3000/auth/dashboard'
+        //window.location.href = 'https://young-mountain-65748.herokuapp.com/auth/dashboard'
       })
       .catch(error => {
         //window.location.href = '/?msg=Not%20a%20valid%20username%20or%20password%20combination';
@@ -291,7 +291,7 @@ export const addCourse = (name, instructor) => {
           _creator: cookies.get('instructor')._id,
           periods: [],
         });
-        window.location.href = 'http://localhost:3000/auth/dashboard';
+        window.location.href = 'https://young-mountain-65748.herokuapp.com/auth/dashboard';
       });
   };
 };

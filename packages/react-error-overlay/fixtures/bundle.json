@@ -1,7 +1,7 @@
 [
   {
     "functionName": "App.componentDidMount",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 26122,
     "columnNumber": 21,
     "_originalFunctionName": "App.componentDidMount",
@@ -25,7 +25,7 @@
   },
   {
     "functionName": null,
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 30091,
     "columnNumber": 25,
     "_originalFunctionName": null,
@@ -49,7 +49,7 @@
   },
   {
     "functionName": "measureLifeCyclePerf",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 29901,
     "columnNumber": 12,
     "_originalFunctionName": "measureLifeCyclePerf",
@@ -73,7 +73,7 @@
   },
   {
     "functionName": null,
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 30090,
     "columnNumber": 11,
     "_originalFunctionName": null,
@@ -97,7 +97,7 @@
   },
   {
     "functionName": "CallbackQueue.notifyAll",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 13256,
     "columnNumber": 22,
     "_originalFunctionName": "CallbackQueue.notifyAll",
@@ -121,7 +121,7 @@
   },
   {
     "functionName": "ReactReconcileTransaction.close",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 35124,
     "columnNumber": 26,
     "_originalFunctionName": "ReactReconcileTransaction.close",
@@ -145,7 +145,7 @@
   },
   {
     "functionName": "ReactReconcileTransaction.closeAll",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 7390,
     "columnNumber": 25,
     "_originalFunctionName": "ReactReconcileTransaction.closeAll",
@@ -169,7 +169,7 @@
   },
   {
     "functionName": "ReactReconcileTransaction.perform",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 7337,
     "columnNumber": 16,
     "_originalFunctionName": "ReactReconcileTransaction.perform",
@@ -193,7 +193,7 @@
   },
   {
     "functionName": "batchedMountComponentIntoNode",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 14204,
     "columnNumber": 15,
     "_originalFunctionName": "batchedMountComponentIntoNode",
@@ -217,7 +217,7 @@
   },
   {
     "functionName": "ReactDefaultBatchingStrategyTransaction.perform",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 7324,
     "columnNumber": 20,
     "_originalFunctionName": "ReactDefaultBatchingStrategyTransaction.perform",
@@ -241,7 +241,7 @@
   },
   {
     "functionName": "Object.batchedUpdates",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 33900,
     "columnNumber": 26,
     "_originalFunctionName": "Object.batchedUpdates",
@@ -265,7 +265,7 @@
   },
   {
     "functionName": "Object.batchedUpdates",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 2181,
     "columnNumber": 27,
     "_originalFunctionName": "Object.batchedUpdates",
@@ -289,7 +289,7 @@
   },
   {
     "functionName": "Object._renderNewRootComponent",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 14398,
     "columnNumber": 18,
     "_originalFunctionName": "Object._renderNewRootComponent",
@@ -313,7 +313,7 @@
   },
   {
     "functionName": "Object._renderSubtreeIntoContainer",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 14479,
     "columnNumber": 32,
     "_originalFunctionName": "Object._renderSubtreeIntoContainer",
@@ -337,7 +337,7 @@
   },
   {
     "functionName": "Object.render",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 14500,
     "columnNumber": 23,
     "_originalFunctionName": "Object.render",
@@ -361,7 +361,7 @@
   },
   {
     "functionName": "Object.friendlySyntaxErrorLabel",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 17287,
     "columnNumber": 20,
     "_originalFunctionName": "Object.friendlySyntaxErrorLabel",
@@ -385,7 +385,7 @@
   },
   {
     "functionName": "__webpack_require__",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 660,
     "columnNumber": 30,
     "_originalFunctionName": "__webpack_require__",
@@ -409,7 +409,7 @@
   },
   {
     "functionName": "fn",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 84,
     "columnNumber": 20,
     "_originalFunctionName": "fn",
@@ -433,7 +433,7 @@
   },
   {
     "functionName": "Object.<anonymous>",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 41219,
     "columnNumber": 18,
     "_originalFunctionName": "Object.<anonymous>",
@@ -451,7 +451,7 @@
   },
   {
     "functionName": "__webpack_require__",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 660,
     "columnNumber": 30,
     "_originalFunctionName": "__webpack_require__",
@@ -475,7 +475,7 @@
   },
   {
     "functionName": "validateFormat",
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 709,
     "columnNumber": 39,
     "_originalFunctionName": "validateFormat",
@@ -499,7 +499,7 @@
   },
   {
     "functionName": null,
-    "fileName": "http://localhost:3000/static/js/bundle.js",
+    "fileName": "https://young-mountain-65748.herokuapp.com/static/js/bundle.js",
     "lineNumber": 712,
     "columnNumber": 10,
     "_originalFunctionName": null,

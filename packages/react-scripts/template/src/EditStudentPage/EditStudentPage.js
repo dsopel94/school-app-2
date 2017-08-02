@@ -19,7 +19,7 @@ class EditStudentPage extends React.Component {
       },
       isSubmitted: false,
     };
-    console.log(this.props.firstName, "FIRST NAME")
+    console.log(this.props.firstName, 'FIRST NAME');
     this.updateInput = this.updateInput.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
@@ -56,7 +56,7 @@ class EditStudentPage extends React.Component {
     const id = this.props.match.params.cuid;
     this.props.dispatch(actions.getStudent(id));
 
-    window.location.href = `http://localhost:3000/courses/${this.props.studentCourse}`;
+    window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${this.props.studentCourse}`;
     this.setState({
       isSubmitted: true,
     });
@@ -157,7 +157,7 @@ const mapStateToProps = (state, props) => {
     streetAddress: state.student.student.streetAddress,
     courses: state.student.courses,
     studentCourse: state.student.student.courses,
-    student: state.student.student
+    student: state.student.student,
   };
 };
 export default connect(mapStateToProps)(EditStudentPage);

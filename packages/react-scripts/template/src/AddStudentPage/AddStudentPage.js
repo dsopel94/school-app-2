@@ -39,7 +39,7 @@ class AddStudentPage extends React.Component {
     const streetAddress = this.state.student.streetAddress;
     const miscAddress = this.state.student.miscAddress;
     const courses = this.props.match.params.cuid;
-    window.location.href = `http://localhost:3000/courses/${courses}`;
+    window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${courses}`;
     this.setState({
       isSubmitted: true,
     });

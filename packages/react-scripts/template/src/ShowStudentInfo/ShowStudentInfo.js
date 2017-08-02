@@ -58,7 +58,7 @@ class ShowStudentInfo extends React.Component {
     this.setState({
       isClickedEdit: !this.state.isClickedEdit,
     });
-    window.location.href = `http://localhost:3000/editStudent/${this.props.id}`;
+    window.location.href = `https://young-mountain-65748.herokuapp.com/editStudent/${this.props.id}`;
   }
 
   isClickedDelete(event) {
@@ -68,7 +68,7 @@ class ShowStudentInfo extends React.Component {
     });
     this.props.dispatch(actions.deleteStudent(event.target.id));
     console.log(event.target.id, 'Check target id');
-    window.location.href = `http://localhost:3000/courses/${this.props.courses}`;
+    window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${this.props.courses}`;
     console.log('this is deleting');
   }
 

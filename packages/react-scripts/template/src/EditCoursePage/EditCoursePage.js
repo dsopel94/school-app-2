@@ -53,7 +53,7 @@ class EditCoursePage extends React.Component {
 
   render() {
     if (this.state.submitted) {
-      window.location.href = `http://localhost:3000/courses/${this.props.match.params.cuid}`;
+      window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${this.props.match.params.cuid}`;
     }
     return (
       <form action="/" onSubmit={this.onSubmit}>
