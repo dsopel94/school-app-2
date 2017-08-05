@@ -24,6 +24,7 @@ class AppInfoPage extends React.Component {
             The front end portion of this application was built using React and the back end
             was built using Mongoose, Express, and Node. mLab was also used for storage of the
             instructor's data and Passport.js is used for authentication purposes.
+            //Forcing a push to heroku
           </p>
         </div>
         <div className="return-link">
