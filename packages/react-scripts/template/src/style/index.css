@@ -11,11 +11,9 @@ html {
 }
 
 .pre {
-  background-image: url('https://i.ytimg.com/vi/n3brytBOv6E/maxresdefault.jpg');
-  background-position: top left;
-  background-size: cover;
+  background-color: beige;
+  background-size: contain;
   height: 100%;
-  margin: 0 auto;
 }
 
 .container {
@@ -288,7 +286,7 @@ button {
   display: block;
   position: absolute;
   top:50px;
-  left: 5px;
+  left: -7px;
 }
 
 .edit-course-name {
@@ -299,6 +297,21 @@ button {
 .add-course-container {
   position: absolute;
   left: 23%;
+}
+
+.edit-course-back {
+  margin-left: 30px;
+  display: inline-block;
+}
+
+.add-student-back {
+  margin-left: 30px;
+  display: inline-block;
+}
+
+.edit-student-back {
+  margin-left: 30px;
+  display: inline-block;
 }
 
 .edit-student-nav-options ul {
@@ -452,7 +465,7 @@ a {
   color: #1a1a1a;
   margin-left: 46px;
   margin: 0;
-  padding-top: 10px;
+  padding-top: 40px;
 }
 
 .info {
@@ -462,18 +475,22 @@ a {
 .info p {
   margin-left: 25%;
   margin-right: 25%;
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
   font-style: Tahoma;
 }
 
 .main-info {
-  margin-top: 120px;
+  margin-top: 40px;
 }
 
 .return-link {
   font-weight: bold;
   font-size: 16pt;
+}
+
+.return-link:hover {
+  color: grey;
 }
 
 .return-link {
@@ -484,6 +501,12 @@ a {
 .courses {
   margin-left: 690px;
   margin-top: 0px;
+}
+
+.add-course-back {
+  display: inline-block;
+  margin-left: 840px;
+  margin-top: 65px;
 }
 
 

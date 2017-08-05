@@ -23,6 +23,7 @@ class EditStudentPage extends React.Component {
     this.updateInput = this.updateInput.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
+    this.handleBack = this.handleBack.bind(this);
   }
   updateInput(event) {
     const field = event.target.name;
@@ -44,6 +45,14 @@ class EditStudentPage extends React.Component {
 
   componentDidMount() {
     this.props.dispatch(actions.getStudent(this.props.match.params.cuid));
+  }
+
+  handleBack(event) {
+    return (
+      <Redirect
+        to="https://young-mountain-65748.herokuapp.com/courses/${this.props.studentCourse}"
+      />
+    );
   }
 
   onSubmit(event) {
@@ -141,6 +150,9 @@ class EditStudentPage extends React.Component {
               />
             </div>
             <button type="submit" className="edit-student">Edit Student</button>
+            <button className="edit-student-back" onClick={this.handleBack}>
+              Back
+            </button>
           </div>
         </div>
       </form>

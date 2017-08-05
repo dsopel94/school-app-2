@@ -53,7 +53,14 @@ const SignUpForm = (
           Create New Account
         </button>
       </div>
-
+      <div className="demo-account-info">
+        <p>Want to try the app without creating a sign up?</p>
+        <p>Below are the credentials for a demo account.</p>
+        <div className="login-info">
+          <p>Username: dsopel</p>
+          <p>Password: Password1</p>
+        </div>
+      </div>
       <div className="login-redirect">
         Already have an account? <Link to={'/login'}> Log in</Link>
         <p>

@@ -17,6 +17,15 @@ class EditCoursePage extends React.Component {
     this.updateName = this.updateName.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
+    this.handleBack = this.handleBack.bind(this);
+  }
+
+  handleBack(event) {
+    return (
+      <Redirect
+        to="https://young-mountain-65748.herokuapp.com/courses/${this.props.match.params.cuid}"
+      />
+    );
   }
 
   handleLogout(event) {
@@ -83,6 +92,9 @@ class EditCoursePage extends React.Component {
               />
             </div>
             <button type="submit" className="edit-course">Edit Course</button>
+            <button className="edit-course-back" onClick={this.handleBack}>
+              Back
+            </button>
           </div>
         </div>
       </form>

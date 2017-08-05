@@ -22,6 +22,7 @@ class AddStudentPage extends React.Component {
     this.updateInput = this.updateInput.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.handleLogout = this.onSubmit.bind(this);
+    this.handleBack = this.handleBack.bind(this);
   }
   updateInput(event) {
     const field = event.target.name;
@@ -59,6 +60,15 @@ class AddStudentPage extends React.Component {
     cookies.remove('instructor');
     cookies.remove('token');
   }
+
+  handleBack(event) {
+    return (
+      <Redirect
+        to="https://young-mountain-65748.herokuapp.com/courses/${courses}"
+      />
+    );
+  }
+
   render() {
     if (this.state.isSubmitted) {
       return <Redirect to={`/courses/${this.props.match.params.cuid}`} />;
@@ -126,6 +136,9 @@ class AddStudentPage extends React.Component {
               />
             </div>
             <button type="submit" className="add-student">Add Student</button>
+            <button className="add-student-back" onClick={this.handleBack}>
+              Back
+            </button>
           </div>
         </div>
       </form>

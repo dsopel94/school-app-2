@@ -16,12 +16,17 @@ class AddCoursePage extends React.Component {
     };
     this.updateName = this.updateName.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.handleBack = this.handleBack.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
   updateName(event) {
     this.setState({
       name: event.target.value,
     });
+  }
+
+  handleBack(event) {
+    return <Redirect to="/auth/dashboard" />;
   }
 
   handleLogout(event) {
@@ -71,6 +76,9 @@ class AddCoursePage extends React.Component {
           </div>
           <button type="submit" className="add-course">Add Course</button>
         </div>
+        <button className="add-course-back" onClick={this.handleBack}>
+          Back
+        </button>
       </form>
     );
   }
