@@ -32,7 +32,7 @@ const localLogin = new LocalStrategy(
   {
     passReqToCallback: true,
   },
-  function(req, username, password, done) {
+  function(username, password, done) {
     console.log('This is getting called!');
     Instructor.findOne({ username: username }, function(err, instructor) {
       if (err) {
@@ -49,9 +49,7 @@ const localLogin = new LocalStrategy(
           return done(err);
         }
         if (!isMatch) {
-          return done(null, false, {
-            error: 'Your login details could not be verified. Please try again.',
-          });
+          return done(null, false);
         }
         console.log('Success!');
         return done(null, instructor);
