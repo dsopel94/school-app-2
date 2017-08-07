@@ -160,6 +160,7 @@ button {
   margin-left: 10%;
   padding: 15px 15px;
   width: 25%;
+  display: block;
 }
 
 .sign-up h2 {
@@ -200,6 +201,7 @@ button {
   margin-left: 11%;
   margin-bottom: 10px;
   margin-top: 10px;
+  display: block;
 }
 
 .login h2 {
