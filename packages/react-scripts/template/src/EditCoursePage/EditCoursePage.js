@@ -21,11 +21,7 @@ class EditCoursePage extends React.Component {
   }
 
   handleBack(event) {
-    return (
-      <Redirect
-        to="https://young-mountain-65748.herokuapp.com/courses/${this.props.match.params.cuid}"
-      />
-    );
+    return <Redirect to={`/courses/${this.props.match.params.cuid}`} />;
   }
 
   handleLogout(event) {

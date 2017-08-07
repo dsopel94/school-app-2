@@ -50,7 +50,9 @@ class EditStudentPage extends React.Component {
   handleBack(event) {
     return (
       <Redirect
-        to="https://young-mountain-65748.herokuapp.com/courses/${this.props.studentCourse}"
+        to={
+          `https://young-mountain-65748.herokuapp.com/courses/${this.props.studentCourse}`
+        }
       />
     );
   }
