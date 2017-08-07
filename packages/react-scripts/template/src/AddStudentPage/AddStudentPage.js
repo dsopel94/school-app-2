@@ -62,7 +62,7 @@ class AddStudentPage extends React.Component {
   }
 
   handleBack(event) {
-    return <Redirect to={`/courses/${this.props.match.params.cuid}`} />;
+    window.location.href = `/courses/${this.props.match.params.cuid}`;
   }
 
   render() {

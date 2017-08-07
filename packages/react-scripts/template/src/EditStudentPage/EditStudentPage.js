@@ -48,7 +48,7 @@ class EditStudentPage extends React.Component {
   }
 
   handleBack(event) {
-    return <Redirect to={`/courses/${this.props.studentCourse}`} />;
+    window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${this.props.studentCourse}`;
   }
 
   onSubmit(event) {

@@ -26,7 +26,7 @@ class AddCoursePage extends React.Component {
   }
 
   handleBack(event) {
-    return <Redirect to="/auth/dashboard" />;
+    window.location.href = '/auth/dashboard';
   }
 
   handleLogout(event) {
