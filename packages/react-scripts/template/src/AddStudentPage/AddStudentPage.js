@@ -62,7 +62,9 @@ class AddStudentPage extends React.Component {
   }
 
   handleBack(event) {
-    window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${this.props.match.params.cuid}`;
+    event.preventDefault();
+    window.location.href = `/courses/${this.props.match.params.cuid}`;
+    console.log('working?');
   }
 
   render() {

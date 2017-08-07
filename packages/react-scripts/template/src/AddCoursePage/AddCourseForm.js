@@ -26,7 +26,10 @@ class AddCoursePage extends React.Component {
   }
 
   handleBack(event) {
-    window.location.href = `https://young-mountain-65748.herokuapp.com/auth/dashboard`;
+    event.preventDefault();
+    this.setState({
+      submitted: true,
+    });
   }
 
   handleLogout(event) {
