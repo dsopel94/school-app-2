@@ -22,7 +22,7 @@ import axios from 'axios';
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
-const API_URL = 'https://desolate-peak-57738.herokuapp.com/api';
+const API_URL = 'https://salty-brook-24528.herokuapp.com/api';
 
 export function errorHandler(dispatch, error, type) {
   let errorMessage = '';
@@ -51,7 +51,7 @@ export function errorHandler(dispatch, error, type) {
 export function getCourse(cuid) {
   return function(dispatch) {
     axios
-      .get(`https://desolate-peak-57738.herokuapp.com/courses/${cuid}`)
+      .get(`https://salty-brook-24528.herokuapp.com/courses/${cuid}`)
       .then(response => {
         dispatch({
           type: GET_COURSE,
@@ -64,7 +64,7 @@ export function getCourse(cuid) {
 export function getCourses() {
   return function(dispatch) {
     axios
-      .get('https://desolate-peak-57738.herokuapp.com/courses')
+      .get('https://salty-brook-24528.herokuapp.com/courses')
       .then(response => {
         dispatch({
           type: GET_COURSES,
@@ -86,7 +86,7 @@ export function setAsAuthenticated() {
 export function getStudents() {
   return function(dispatch) {
     axios
-      .get('https://desolate-peak-57738.herokuapp.com/students')
+      .get('https://salty-brook-24528.herokuapp.com/students')
       .then(response => {
         dispatch({
           type: GET_STUDENTS,
@@ -99,7 +99,7 @@ export function getStudents() {
 export function getStudent(id) {
   return function(dispatch) {
     axios
-      .get(`https://desolate-peak-57738.herokuapp.com/students/${id}`)
+      .get(`https://salty-brook-24528.herokuapp.com/students/${id}`)
       .then(response => {
         console.log(response.data, "What's going on here?");
         dispatch({
@@ -113,7 +113,7 @@ export function getStudent(id) {
 export function deleteStudent(id) {
   return function(dispatch) {
     axios
-      .delete(`https://desolate-peak-57738.herokuapp.com/students/${id}`)
+      .delete(`https://salty-brook-24528.herokuapp.com/students/${id}`)
       .then(response => {});
   };
 }
@@ -121,7 +121,7 @@ export function deleteStudent(id) {
 export function deleteCourse(id) {
   return function(dispatch) {
     axios
-      .delete(`https://desolate-peak-57738.herokuapp.com/courses/${id}`)
+      .delete(`https://salty-brook-24528.herokuapp.com/courses/${id}`)
       .then(response => {
         window.location.href = 'https://young-mountain-65748.herokuapp.com/auth/dashboard';
         dispatch({
@@ -135,7 +135,7 @@ export function deleteCourse(id) {
 export function addPeriod(number) {
   return function(dispatch) {
     axios
-      .post('https://desolate-peak-57738.herokuapp.com/periods')
+      .post('https://salty-brook-24528.herokuapp.com/periods')
       .then(response => {
         dispatch({
           type: ADD_COURSE,
@@ -148,7 +148,7 @@ export function addPeriod(number) {
 export function editCourse(coursename, id) {
   return function(dispatch) {
     axios
-      .put(`https://desolate-peak-57738.herokuapp.com/courses/${id}`, {
+      .put(`https://salty-brook-24528.herokuapp.com/courses/${id}`, {
         name: coursename,
       })
       .then(response => {
@@ -167,7 +167,7 @@ export const registerUser = (
   return function(dispatch) {
     console.log('This is getting called!');
     axios
-      .post('https://desolate-peak-57738.herokuapp.com/api/auth/register', {
+      .post('https://salty-brook-24528.herokuapp.com/api/auth/register', {
         username: username,
         fullName: fullName,
         password: password,
@@ -194,7 +194,7 @@ export const addStudent = (
 ) => {
   return function(dispatch) {
     axios
-      .post(`https://desolate-peak-57738.herokuapp.com/students`, {
+      .post(`https://salty-brook-24528.herokuapp.com/students`, {
         firstName: firstName,
         lastName: lastName,
         phoneNumber: phoneNumber,
@@ -229,7 +229,7 @@ export const editStudent = (
 ) => {
   return function(dispatch) {
     axios
-      .put(`https://desolate-peak-57738.herokuapp.com/students/${id}`, {
+      .put(`https://salty-brook-24528.herokuapp.com/students/${id}`, {
         firstName: firstName,
         lastName: lastName,
         phoneNumber: phoneNumber,
@@ -274,11 +274,11 @@ export const loginUser = (username, password) => {
       });
   };
 };
-//https://desolate-peak-57738.herokuapp.com/courses
+//https://salty-brook-24528.herokuapp.com/courses
 export const addCourse = (name, instructor) => {
   return function(dispatch) {
     axios
-      .post(`https://desolate-peak-57738.herokuapp.com/courses`, {
+      .post(`https://salty-brook-24528.herokuapp.com/courses`, {
         name: name,
         _creator: instructor,
         periods: [],

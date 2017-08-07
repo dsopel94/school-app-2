@@ -36,7 +36,7 @@ class DashboardPage extends React.Component {
 
   componentDidMount() {
     this.props.dispatch(actions.getCourses());
-    // axios.get('https://desolate-peak-57738.herokuapp.com/courses').then(response => {
+    // axios.get('https://salty-brook-24528.herokuapp.com/courses').then(response => {
     //   const courses = response.data.courses;
     //   const userIds = Object.keys(courses).map(
     //     course => courses[course]._creator
