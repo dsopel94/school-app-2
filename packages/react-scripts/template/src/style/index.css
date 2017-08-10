@@ -311,9 +311,9 @@ button {
   display: inline-block;
 }
 
-.edit-student-back {
-  margin-left: 30px;
-  display: inline-block;
+.edit-student {
+display: inline-block;
+margin-top: 427px;
 }
 
 .edit-student-nav-options ul {
@@ -400,20 +400,6 @@ button:hover {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.edit-student {
-  background-color: #4CAF50;
-border: none;
-color: white;
-padding: 15px 30px;
-margin-left: 110px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-margin-top: 10px
-
 }
 
 .student-name h2 {
