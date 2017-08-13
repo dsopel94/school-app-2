@@ -587,10 +587,6 @@ button {
   margin-bottom: 20px;
 }
 
-html, body .pre {
-  background-color: beige;
-}
-
 body, html .main {
   background-color:#d3f8d3;
   display: block;
