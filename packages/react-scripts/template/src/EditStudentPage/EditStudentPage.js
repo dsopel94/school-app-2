@@ -88,7 +88,7 @@ class EditStudentPage extends React.Component {
             <a
               id="course-return"
               className="menu-item"
-              href={`/courses/${this.props.match.params.cuid}`}
+              href={`/courses/${this.props.studentCourse}`}
             >
               Back to Your Course
             </a>
