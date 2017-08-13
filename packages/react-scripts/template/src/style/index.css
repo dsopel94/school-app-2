@@ -318,6 +318,7 @@ button {
 .edit-student-back {
 margin-left: 30px;
 display: inline-block;
+background-color: red;
 }
 
 .edit-student-nav-options ul {
@@ -513,6 +514,10 @@ a {
 
 .bm-burger-button, .mobile-name, .course-header-mobile {
   display: none;
+}
+
+.delete-student, .edit-course-back, .add-student-back, .edit-student-back {
+  background-color: red;
 }
 
 }
