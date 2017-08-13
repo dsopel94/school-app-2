@@ -34,7 +34,6 @@ class AddStudentPage extends React.Component {
     });
   }
   onSubmit(event) {
-    event.preventDefault();
     const firstName = this.state.student.firstName;
     const lastName = this.state.student.lastName;
     const phoneNumber = this.state.student.phoneNumber;

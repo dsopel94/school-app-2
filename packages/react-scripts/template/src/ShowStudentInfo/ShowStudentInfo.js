@@ -54,7 +54,6 @@ class ShowStudentInfo extends React.Component {
   }
 
   isClickedEdit(event) {
-    event.preventDefault();
     this.setState({
       isClickedEdit: !this.state.isClickedEdit,
     });
@@ -62,7 +61,6 @@ class ShowStudentInfo extends React.Component {
   }
 
   isClickedDelete(event) {
-    event.preventDefault();
     this.setState({
       isClickedDelete: !this.state.isClickedDelete,
     });

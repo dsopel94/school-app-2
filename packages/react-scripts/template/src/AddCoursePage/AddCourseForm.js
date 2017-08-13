@@ -38,7 +38,6 @@ class AddCoursePage extends React.Component {
     cookies.remove('token');
   }
   onSubmit(event) {
-    event.preventDefault();
     const name = this.state.name;
     const instructor = cookies.get('instructor')._id;
     console.log(cookies.get('instructor')._id);
