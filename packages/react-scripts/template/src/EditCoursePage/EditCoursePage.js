@@ -106,13 +106,15 @@ class EditCoursePage extends React.Component {
                 onChange={this.updateName}
               />
             </div>
-            <button className="edit-course" onClick={this.onSubmit}>
-              Edit Course
-            </button>
-            <button className="edit-course-back" onClick={this.handleBack}>
-              Back
-            </button>
           </div>
+        </div>
+        <div className="edit-course-buttons">
+          <button className="edit-course" onClick={this.onSubmit}>
+            Edit Course
+          </button>
+          <button className="edit-course-back" onClick={this.handleBack}>
+            Back
+          </button>
         </div>
       </div>
     );

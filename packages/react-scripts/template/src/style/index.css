@@ -74,17 +74,24 @@ label {
 }
 
 .field-line label {
-  display: inline-block;
-  width: 88px;
-  float: left;
-  clear: left;
-  text-align: right;
-  margin-top: -4px;
+display: inline-block;
+width: -9px;
+margin-top: 7px;
+white-space: nowrap;
+margin-right: 0px;
+}
+
+.edit-course-buttons {
+  margin-top: 90px;
+  margin-left: 615px;
 }
 
 .field-line input {
-  display: inline-block;
-  width: 175px;
+  
+ display: inline-block;
+ margin-left: 91px;
+ width: 22%;
+ margin-right: 0px;
 }
 
 .add-student-field-line label {
