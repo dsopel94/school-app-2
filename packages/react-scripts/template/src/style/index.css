@@ -512,7 +512,6 @@ a {
 
 @media only screen and (max-device-width:375px) {
 .pre {
-  background-color: beige;
   background-size: cover;
   height: 100%;
   text-align: center;
