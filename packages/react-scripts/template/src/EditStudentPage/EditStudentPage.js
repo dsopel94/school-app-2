@@ -4,6 +4,7 @@ import * as actions from '../actions/index';
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 import Cookies from 'universal-cookie';
+import { slide as Menu } from 'react-burger-menu';
 const cookies = new Cookies();
 
 class EditStudentPage extends React.Component {
@@ -81,7 +82,24 @@ class EditStudentPage extends React.Component {
       //return <Redirect to={`/courses/${this.props.match.params.cuid}`} />
     }
     return (
-      <form action="/" onSubmit={this.onSubmit}>
+      <div className="edit-student-form">
+        <div className="menu">
+          <Menu>
+            <a
+              id="course-return"
+              className="menu-item"
+              href={`/courses/${this.props.match.params.cuid}`}
+            >
+              Back to Your Course
+            </a>
+            <a id="course-logout" className="menu-item" href="/login">Logout</a>
+          </Menu>
+        </div>
+        <div className="mobile-header">
+          <div className="mobile-name">
+            {this.props.student.firstName} {this.props.student.lastName}
+          </div>
+        </div>
         <div className="student-name">
           <div className="app-name">School Management System</div>
           <div className="edit-student-nav-options">
@@ -145,13 +163,17 @@ class EditStudentPage extends React.Component {
                 onChange={this.updateInput}
               />
             </div>
-            <button type="submit" className="edit-student">Edit Student</button>
-            <button className="edit-student-back" onClick={this.handleBack}>
-              Back
-            </button>
+            <div className="edit-student-buttons">
+              <button className="edit-student" onClick={this.onSubmit}>
+                Edit Student
+              </button>
+              <button className="edit-student-back" onClick={this.handleBack}>
+                Back
+              </button>
+            </div>
           </div>
         </div>
-      </form>
+      </div>
     );
   }
 }

@@ -4,6 +4,7 @@ import * as actions from '../actions/index';
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 import Cookies from 'universal-cookie';
+import { slide as Menu } from 'react-burger-menu';
 const cookies = new Cookies();
 
 class AddCoursePage extends React.Component {
@@ -54,7 +55,24 @@ class AddCoursePage extends React.Component {
       return <Redirect to="/auth/dashboard" />;
     }
     return (
-      <form action="/" onSubmit={this.onSubmit}>
+      <div className="add-course-form">
+        <div className="menu">
+          <Menu>
+            <a
+              id="dashboard-return"
+              className="menu-item"
+              href="/auth/dashboard"
+            >
+              Return to Dashboard
+            </a>
+            <a id="dashboard-logout" className="menu-item" href="/login">
+              Logout
+            </a>
+          </Menu>
+        </div>
+        <div className="mobile-header">
+          <div className="mobile-name">Add a Course</div>
+        </div>
         <div className="add-course-nav-options">
           <div className="student-app-name">School Management App</div>
           <ul>
@@ -77,12 +95,14 @@ class AddCoursePage extends React.Component {
               onChange={this.updateName}
             />
           </div>
-          <button type="submit" className="add-course">Add Course</button>
+          <button onClick={this.onSubmit} className="add-course">
+            Add Course
+          </button>
         </div>
         <button className="add-course-back" onClick={this.handleBack}>
           Back
         </button>
-      </form>
+      </div>
     );
   }
 }

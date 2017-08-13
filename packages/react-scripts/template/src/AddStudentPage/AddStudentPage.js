@@ -4,6 +4,7 @@ import * as actions from '../actions/index';
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 import Cookies from 'universal-cookie';
+import { slide as Menu } from 'react-burger-menu';
 const cookies = new Cookies();
 
 class AddStudentPage extends React.Component {
@@ -72,7 +73,22 @@ class AddStudentPage extends React.Component {
       return <Redirect to={`/courses/${this.props.match.params.cuid}`} />;
     }
     return (
-      <form action="/" onSubmit={this.onSubmit}>
+      <div className="add-student-form">
+        <div className="menu">
+          <Menu>
+            <a
+              id="course-return"
+              className="menu-item"
+              href={`/courses/${this.props.match.params.cuid}`}
+            >
+              Back to Your Course
+            </a>
+            <a id="course-logout" className="menu-item" href="/login">Logout</a>
+          </Menu>
+        </div>
+        <div className="mobile-header">
+          <div className="mobile-name">Add a Student</div>
+        </div>
         <div className="student-app-name">School Management App</div>
         <div className="add-student-nav-options">
           <ul>
@@ -133,13 +149,17 @@ class AddStudentPage extends React.Component {
                 onChange={this.updateInput}
               />
             </div>
-            <button type="submit" className="add-student">Add Student</button>
-            <button className="add-student-back" onClick={this.handleBack}>
-              Back
-            </button>
+            <div className="add-student-buttons">
+              <button onClick={this.onSubmit} className="add-student">
+                Add Student
+              </button>
+              <button className="add-student-back" onClick={this.handleBack}>
+                Back
+              </button>
+            </div>
           </div>
         </div>
-      </form>
+      </div>
     );
   }
 }

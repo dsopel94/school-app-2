@@ -86,7 +86,7 @@ class ShowStudentInfo extends React.Component {
   }
   render() {
     return (
-      <div className="student-info-container">
+      <div className="student-info-container main">
         <div className="student-button">
           <button
             className="students"

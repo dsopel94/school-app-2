@@ -1,3 +1,5 @@
+@media only screen and (min-device-width:376px) {
+
 body {
   margin: 0 auto;
   padding: 0;
@@ -506,4 +508,293 @@ a {
 
 .dashboard-your-courses h2 {
   color: #778899;
+}
+
+.bm-burger-button, .mobile-name, .course-header-mobile {
+  display: none;
+}
+
+}
+
+@media only screen and (max-device-width:375px) {
+.pre {
+  background-color: beige;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+}
+
+.info {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-family: Palatino;
+  font-weight: bolder;
+}
+
+.return-link a {
+  font-size: 15pt;
+}
+
+
+a:active {
+  color:white;
+}
+
+.info, .header {
+  padding-top:10px;
+}
+
+label {
+  margin: 0 auto;
+  font-size:14pt;
+  margin: 5px;
+  display:block;
+  text-align:left;
+  margin-left: 17%;
+}
+
+.login-error-msg {
+  margin-top: 15px;
+}
+
+input {
+  margin: 0 auto;
+  height:40px;
+  display: block;
+  width:65%;
+}
+
+.sign-up-button, .login-button {
+  padding: 12px 0px;
+  margin-top: 20px;
+  font-size: 13pt;
+  white-space: nowrap;
+  width: 75%;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+}
+
+button {
+  border: none;
+  color: white;
+  background-color: #4CAF50;
+  white-space: nowrap;
+  font-size: 13pt;
+  padding: 12px;
+  width: 75%;
+}
+
+.login-button {
+  margin-bottom: 20px;
+}
+
+html, body .pre {
+  background-color: beige;
+}
+
+body, html .main {
+  background-color:#d3f8d3;
+  display: block;
+  background-size: 100% 100%;
+}
+
+.main {
+  background-size: cover;
+  background-color:#d3f8d3;
+}
+
+.bm-burger-button {
+    position: fixed;
+    width: 30px;
+    height: 20px;
+    left: 15px;
+    top: 10px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-cross-button {
+  right: 100px !important; 
+}
+
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  background-color: #EDECE5;
+  position: relative;
+  width: 70%;
+}
+
+
+.bm-burger-bars {
+  background: gray;
+}
+
+.greeting, .getting-started, .dashboard-links, .add-course-nav-options, .course-name, .edit-course-name, .course-app-name, .nav-options,
+.edit-course-nav-options, .add-student-nav-options, .student-app-name, .student-name {
+  display: none;
+}
+
+.edit-course-form button {
+  margin: 5px 22%;
+  width: 50%;
+}
+
+.course-page h2 {
+  text-align: center;
+  padding-top: 60px; 
+}
+
+.studentList {
+ text-align: center;
+}
+
+.student-info-box {
+  background-color: #EEECE6;
+  padding-top: 10px;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding-bottom: 30px;
+  width:90%;
+  border: 2px solid black;
+}
+
+.container {
+  padding-top: 30px;
+}
+
+.edit-student {
+  margin-bottom: 10px;
+}
+
+.submitForm {
+  padding-top: 30px;
+}
+
+.field-line {
+  margin-bottom: 15px;
+}
+
+.add-student, .add-student-back {
+  text-align: center;
+  margin: 7px;
+}
+
+.delete-student, .edit-course-back, .add-student-back, .edit-student-back {
+  background-color: red;
+}
+
+.edit-student-buttons {
+  margin: 5px 22%;
+  width: 75%;
+  margin-top: 15px;
+}
+
+.add-student-field-line {
+  margin-top: 5px;
+}
+
+.modal-container {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.modal-container button {
+  margin: 7px;
+}
+
+ div.confirm-buttons > button:nth-child(2) {
+  background-color: red;
+ }
+
+.ReactModal__Content--after-open {
+  background-color: beige !important;
+}
+
+
+.modal-container h2 {
+  font-family: Helvetica;
+  text-align: center;
+}
+
+
+.dashboard-your-courses {
+  text-align: center;
+  padding-top:40px;
+}
+
+.courseList {
+  text-align: center;
+}
+
+.mobile-header {
+  height: 40px;
+  background-color: #26C0FF;
+  width: 100%;
+  padding: 0;
+  position: fixed;
+}
+
+html, body {
+  padding: 0 auto;
+  margin: 0;
+  background-color:#d3f8d3;
+}
+
+.mobile-name {
+  font-style: Helvetica;
+  opacity: .5;
+  margin-top: 0;
+  font-weight: bold;
+  padding-top: 10px;
+  font-size: 14pt;
+  text-align: right;
+  margin-right: 5px;
+}
+
+.add-student-buttons {
+  margin: 7px 20%;
+  width: 75%;
+  margin-top: 10px;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menu-item {
+  display: block;
+  outline: none;
+  font-size: 13pt;
+  margin-left: 50px;
+  margin-bottom: 5px;
+  color: gray;
+  float: right;
+  font-family: Helvetica;
+  white-space: nowrap;
+}
+
+.add-coursename-field-line {
+  margin-bottom: 23px;
+}
+
+.add-course-form button {
+  display: inline-block;
+  width: 50%;
+  margin: 5px 22%;
+}
+
+.add-course-back {
+  background-color: red;
+}
+
 }

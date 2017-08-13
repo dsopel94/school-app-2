@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import CourseList from '../CourseList/CourseList.js';
 import axios from 'axios';
 import { Redirect } from 'react-router';
+import { slide as Menu } from 'react-burger-menu';
 //import router from '../server/controllers/course.controller.js'
 const cookies = new Cookies();
 
@@ -66,7 +67,15 @@ class DashboardPage extends React.Component {
       }
     });
     return (
-      <div>
+      <div className="main">
+        <div class="menu">
+          <Menu>
+            <a id="add-course" className="menu-item" href="/addCourse">
+              Add A Course
+            </a>
+            <a id="logout" className="menu-item" href="/login">Logout</a>
+          </Menu>
+        </div>
         <div className="dashboard-links">
           <div className="student-app-name">School Management App</div>
           <ul>
@@ -77,6 +86,9 @@ class DashboardPage extends React.Component {
           </ul>
         </div>
         <div className="greeting"> Welcome Back, {inst}</div>
+        <div className="mobile-header">
+          <div className="mobile-name">{inst}</div>
+        </div>
         <div className="getting-started">
           <p>
             Need help getting started? It's as simple as clicking on "Add a new Course" above and your courses can be accessed by clicking on the desired one below!

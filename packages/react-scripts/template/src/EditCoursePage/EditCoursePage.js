@@ -4,6 +4,7 @@ import * as actions from '../actions/index';
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 import Cookies from 'universal-cookie';
+import { slide as Menu } from 'react-burger-menu';
 const cookies = new Cookies();
 
 class EditCoursePage extends React.Component {
@@ -30,8 +31,9 @@ class EditCoursePage extends React.Component {
   }
 
   updateName(event) {
+    var input = event.target.value;
     this.setState({
-      name: event.target.value,
+      name: input,
     });
   }
 
@@ -61,7 +63,24 @@ class EditCoursePage extends React.Component {
       window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${this.props.match.params.cuid}`;
     }
     return (
-      <form action="/" onSubmit={this.onSubmit}>
+      <div className="edit-course-form">
+        <div className="menu">
+          <Menu>
+            <a
+              id="dashboard-return"
+              className="menu-item"
+              href={`/courses/${this.props.match.params.cuid}`}
+            >
+              Back to Your Course
+            </a>
+            <a id="dashboard-logout" className="menu-item" href="/login">
+              Logout
+            </a>
+          </Menu>
+        </div>
+        <div className="mobile-header">
+          <div className="mobile-name">{this.props.name}</div>
+        </div>
         <div className="edit-course-nav-options">
           <div className="course-app-name">School Management App</div>
           <ul>
@@ -79,7 +98,7 @@ class EditCoursePage extends React.Component {
           <div className="edit-course-name"><h2>{this.props.name}</h2></div>
           <div className="submitForm">
             <div className="field-line">
-              <label htmlFor="coursename">Course Name:</label>
+              <label htmlFor="coursename">New Course Name:</label>
               <input
                 id="coursename"
                 name="coursename"
@@ -87,13 +106,15 @@ class EditCoursePage extends React.Component {
                 onChange={this.updateName}
               />
             </div>
-            <button type="submit" className="edit-course">Edit Course</button>
+            <button className="edit-course" onClick={this.onSubmit}>
+              Edit Course
+            </button>
             <button className="edit-course-back" onClick={this.handleBack}>
               Back
             </button>
           </div>
         </div>
-      </form>
+      </div>
     );
   }
 }
