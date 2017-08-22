@@ -516,9 +516,13 @@ a {
   display: none;
 }
 
-.delete-student, .edit-course-back, .add-student-back, .edit-student-back {
+.delete-student, .edit-course-back, .add-student-back, .edit-student-back, .add-course-back {
   background-color: red;
 }
+
+div.confirm-buttons > button:nth-child(2) {
+  background-color: red;
+ }
 
 }
 
@@ -796,6 +800,10 @@ html, body {
 
 .add-course-back {
   background-color: red;
+}
+
+button {
+  cursor: pointer;
 }
 
 }
