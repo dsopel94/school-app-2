@@ -99,6 +99,7 @@ class EditCoursePage extends React.Component {
             <div className="field-line">
               <label htmlFor="coursename">New Course Name:</label>
               <input
+                id="coursename"
                 name="coursename"
                 value={this.state.name}
                 onChange={this.updateName}
