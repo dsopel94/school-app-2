@@ -650,6 +650,7 @@ body, html .main {
 }
 
 .edit-course-form button {
+  cursor: pointer;
   margin: 5px 22%;
   width: 50%;
 }
