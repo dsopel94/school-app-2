@@ -114,9 +114,7 @@ export function deleteStudent(id) {
   return function(dispatch) {
     axios
       .delete(`https://salty-brook-24528.herokuapp.com/students/${id}`)
-      .then(response => {
-        window.location.reload();
-      });
+      .then(response => {});
   };
 }
 

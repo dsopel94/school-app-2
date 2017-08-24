@@ -66,7 +66,7 @@ class ShowStudentInfo extends React.Component {
     });
     this.props.dispatch(actions.deleteStudent(event.target.id));
     console.log(event.target.id, 'Check target id');
-    window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${this.props.courses}`;
+    window.location.reload();
     console.log('this is deleting');
   }
 
