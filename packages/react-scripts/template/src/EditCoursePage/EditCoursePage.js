@@ -27,6 +27,7 @@ class EditCoursePage extends React.Component {
 
   handleLogout(event) {
     //cookies.remove('instructor');
+    //force a commit
     cookies.remove('token');
   }
 
