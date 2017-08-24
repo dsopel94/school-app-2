@@ -212,7 +212,7 @@ export const addStudent = (
           streetAddress: streetAddress,
           miscAddress: miscAddress,
         });
-        window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${courses}`;
+        window.location.href = `/courses/${courses}`;
         console.log(window.location.href);
         console.log(response.data.students, 'Student response');
       });

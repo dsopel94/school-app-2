@@ -21,8 +21,8 @@ class AddStudentPage extends React.Component {
       isSubmitted: false,
     };
     this.updateInput = this.updateInput.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
-    this.handleLogout = this.onSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
     this.handleBack = this.handleBack.bind(this);
   }
   updateInput(event) {
@@ -33,14 +33,13 @@ class AddStudentPage extends React.Component {
       student,
     });
   }
-  onSubmit(event) {
+  handleSubmit(event) {
     const firstName = this.state.student.firstName;
     const lastName = this.state.student.lastName;
     const phoneNumber = this.state.student.phoneNumber;
     const streetAddress = this.state.student.streetAddress;
     const miscAddress = this.state.student.miscAddress;
     const courses = this.props.match.params.cuid;
-    window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${courses}`;
     this.setState({
       isSubmitted: true,
     });
@@ -149,7 +148,7 @@ class AddStudentPage extends React.Component {
               />
             </div>
             <div className="add-student-buttons">
-              <button onClick={this.onSubmit} className="add-student">
+              <button onClick={this.handleSubmit} className="add-student">
                 Add Student
               </button>
               <button className="add-student-back" onClick={this.handleBack}>

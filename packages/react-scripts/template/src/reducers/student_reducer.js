@@ -13,7 +13,7 @@ export default function(state = INITIAL_STATE, action) {
     case ADD_STUDENT:
       return {
         ...state,
-        students: [...state.students, ...action.payload],
+        students: { ...state.students, ...action.payload },
       };
     case GET_STUDENTS:
       return {
