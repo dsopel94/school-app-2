@@ -16,7 +16,7 @@ class EditCoursePage extends React.Component {
       _creator: {},
     };
     this.updateName = this.updateName.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
     this.handleBack = this.handleBack.bind(this);
   }
@@ -45,7 +45,8 @@ class EditCoursePage extends React.Component {
     this.props.dispatch(actions.getCourse(this.props.match.params.cuid));
   }
 
-  onSubmit(event) {
+  handleSubmit(event) {
+    event.preventDefault();
     const name = this.state.name;
     const instructor = cookies.get('instructor')._id;
     console.log(cookies.get('instructor')._id);
@@ -99,7 +100,6 @@ class EditCoursePage extends React.Component {
             <div className="field-line">
               <label htmlFor="coursename">New Course Name:</label>
               <input
-                id="coursename"
                 name="coursename"
                 value={this.state.name}
                 onChange={this.updateName}
@@ -108,11 +108,7 @@ class EditCoursePage extends React.Component {
           </div>
         </div>
         <div className="edit-course-buttons">
-          <button
-            onClick={this.onSubmit}
-            onTouchEnter={this.onSubmit}
-            className="edit-course"
-          >
+          <button onClick={this.handleSubmit} className="edit-course">
             Edit Course
           </button>
           <button className="edit-course-back" onClick={this.handleBack}>
