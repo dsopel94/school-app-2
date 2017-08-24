@@ -66,7 +66,6 @@ class ShowStudentInfo extends React.Component {
     });
     this.props.dispatch(actions.deleteStudent(event.target.id));
     console.log(event.target.id, 'Check target id');
-    window.location.reload();
     console.log('this is deleting');
   }
 
