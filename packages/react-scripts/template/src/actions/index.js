@@ -225,7 +225,8 @@ export const editStudent = (
   phoneNumber,
   streetAddress,
   miscAddress,
-  id
+  id,
+  course
 ) => {
   return function(dispatch) {
     axios
@@ -237,8 +238,9 @@ export const editStudent = (
         miscAddress: miscAddress,
       })
       .then(response => {
+        //const course = response.data.students.courses
         console.log(response.data.students, 'Checking after put');
-        window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${response.data.students.courses}`;
+        window.location.href = `/courses/${course}`;
       });
   };
 };

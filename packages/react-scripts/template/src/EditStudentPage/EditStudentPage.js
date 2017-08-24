@@ -22,7 +22,7 @@ class EditStudentPage extends React.Component {
     };
     console.log(this.props.firstName, 'FIRST NAME');
     this.updateInput = this.updateInput.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
     this.handleBack = this.handleBack.bind(this);
   }
@@ -52,16 +52,15 @@ class EditStudentPage extends React.Component {
     window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${this.props.studentCourse}`;
   }
 
-  onSubmit(event) {
+  handleSubmit(event) {
     const firstName = this.state.student.firstName;
     const lastName = this.state.student.lastName;
     const phoneNumber = this.state.student.phoneNumber;
     const streetAddress = this.state.student.streetAddress;
     const miscAddress = this.state.student.miscAddreess;
     const id = this.props.match.params.cuid;
+    const course = this.props.studentCourse;
     this.props.dispatch(actions.getStudent(id));
-
-    window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${this.props.studentCourse}`;
     this.setState({
       isSubmitted: true,
     });
@@ -72,13 +71,14 @@ class EditStudentPage extends React.Component {
         phoneNumber,
         streetAddress,
         miscAddress,
-        id
+        id,
+        course
       )
     );
   }
   render() {
     if (this.state.isSubmitted) {
-      //return <Redirect to={`/courses/${this.props.match.params.cuid}`} />
+      return <Redirect to={`/courses/${this.props.studentCourse}`} />;
     }
     return (
       <div className="edit-student-form">
@@ -163,7 +163,7 @@ class EditStudentPage extends React.Component {
               />
             </div>
             <div className="edit-student-buttons">
-              <button className="edit-student" onClick={this.onSubmit}>
+              <button className="edit-student" onClick={this.handleSubmit}>
                 Edit Student
               </button>
               <button className="edit-student-back" onClick={this.handleBack}>
