@@ -116,6 +116,10 @@ export function deleteStudent(id) {
       .delete(`https://salty-brook-24528.herokuapp.com/students/${id}`)
       .then(response => {
         window.location.reload();
+        dispatch({
+          type: GET_STUDENTS,
+          payload: response.data.students,
+        });
       });
   };
 }
