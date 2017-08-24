@@ -153,7 +153,7 @@ export function editCourse(coursename, id) {
       })
       .then(response => {
         console.log(response.data.courses);
-        window.location.href = `https://young-mountain-65748.herokuapp.com/courses/${response.data.courses._id}`;
+        window.location.href = `/courses/${id}`;
       });
   };
 }
