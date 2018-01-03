@@ -72,35 +72,39 @@ class AddStudentPage extends React.Component {
     }
     return (
       <div className="add-student-form">
-        <div className="menu">
-          <Menu>
-            <a
-              id="course-return"
-              className="menu-item"
-              href={`/courses/${this.props.match.params.cuid}`}
-            >
-              Back to Your Course
-            </a>
-            <a id="course-logout" className="menu-item" href="/login">Logout</a>
-          </Menu>
+        <div className="add-student-links">
+          <div className="student-app-name">School Management App</div>
+          <ul>
+            <li>
+              <a
+                id="course-return"
+                className="menu-item"
+                href={`/courses/${this.props.match.params.cuid}`}
+              >
+                Back to Your Course
+              </a>
+            </li>
+            <li>
+              <a id="course-logout" className="menu-item" href="/login">
+                Logout
+              </a>
+            </li>
+          </ul>
         </div>
         <div className="mobile-header">
           <div className="mobile-name">Add a Student</div>
         </div>
-        <div className="student-app-name">School Management App</div>
-        <div className="add-student-nav-options">
-          <ul>
-            <li>
-              <Link to={`/courses/${this.props.match.params.cuid}`}>
-                Back to Your Course Page
-              </Link>
-            </li>
-            <li>
-              <Link to="/login" onClick={this.handleLogout}>Log out </Link>
-            </li>
-          </ul>
+        <div className="menu">
+          <div className="course-app-name">School Management App</div>
+          <Menu>
+            <Link to={`/courses/${this.props.match.params.cuid}`}>
+              Back to Your Course Page
+            </Link>
+            <Link to="/login" onClick={this.handleLogout}>Log out </Link>
+          </Menu>
         </div>
         <div className="container">
+          <h2 className="add-student-header">Add A Student</h2>
           <div className="submitForm">
             <div className="add-student-field-line">
               <label htmlFor="firstName">First Name:</label>

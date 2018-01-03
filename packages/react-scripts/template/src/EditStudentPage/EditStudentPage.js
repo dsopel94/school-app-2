@@ -100,8 +100,8 @@ class EditStudentPage extends React.Component {
           </div>
         </div>
         <div className="student-name">
-          <div className="app-name">School Management System</div>
-          <div className="edit-student-nav-options">
+          <div className="edit-student-links">
+            <div className="student-app-name">School Management System</div>
             <ul>
               <li>
                 <Link to={`/courses/${this.props.studentCourse}`}>

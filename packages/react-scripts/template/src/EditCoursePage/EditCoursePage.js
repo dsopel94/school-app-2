@@ -82,8 +82,8 @@ class EditCoursePage extends React.Component {
         <div className="mobile-header">
           <div className="mobile-name">{this.props.name}</div>
         </div>
-        <div className="edit-course-nav-options">
-          <div className="course-app-name">School Management App</div>
+        <div className="edit-course-links">
+          <div className="student-app-name">School Management App</div>
           <ul>
             <li>
               <Link to="/login" onClick={this.handleLogout}>Log out </Link>

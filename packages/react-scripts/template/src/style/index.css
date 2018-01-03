@@ -13,122 +13,60 @@ html {
 }
 
 .container {
-  margin: 0 auto;
-  width: 50%;
-  padding-top: 20px;
-  margin-right:150px;
+ 
 }
 
 h1 {
   font-family: Tahoma;
-
+  text-align: center;
 }
 
 h2 {
   font-family: Arial;
   font-size: 30px;
   color: #1a1a1a;
-  padding-left: 100px;
+  text-align: center;
 }
 
 label {
   font-family: Arial;
   font-size: 20px;
   color: #1a1a1a;
-  float: left;
-  clear: left;
-  width: 95px;
   display: inline-block;
-  padding-right: 7px;
 }
 
-.sign-up-field-line label {
-  width: 100px;
-  margin-bottom: 5px;
-}
-
-.login-field-line label {
-  margin-bottom: 5px;
-}
-
-.confirm-msg {
-  margin-bottom: 30px;
-}
-
-.confirm-buttons {
-  position: relative;
-  right: 80px;
-}
-
-.add-coursename-field-line input {
-  display: inline-block;
-  width: 200px;
-}
-
-.add-coursename-field-line label {
-  display: inline-block;
-  width: 300px;
-  float: left;
+.sign-up-field-line label, .login-field-line label, .add-coursename-field-line label, .field-line label, .add-student-field-line label, .edit-student-field-line label {
+  width: 45%;
+  margin: auto;
   text-align: right;
-  margin-top: 5px;
+  padding-top: 10px;
+  padding-right: 10px;
 }
 
-.field-line label {
-display: inline-block;
-width: -9px;
-margin-top: 7px;
-white-space: nowrap;
-margin-right: 0px;
+.login-field-line input, .sign-up-field-line input, .add-coursename-field-line input, .field-line input, .add-student-field-line input, .edit-student-field-line input {
+  height: 30px;
 }
 
-.edit-course-buttons {
-  margin-top: 90px;
-  margin-left: 615px;
+.add-student-buttons {
+  margin-left: 43%;
+  margin-top: 30px;
 }
 
-.field-line input {
-  
- display: inline-block;
- margin-left: 91px;
- width: 22%;
- margin-right: 0px;
+.edit-student-buttons {
+  margin-left: 42%;
+  margin-top: 30px;
 }
 
-.add-student-field-line label {
-  display: inline-block;
-  width: 95px;
-  float: left;
-  clear: left;
-  text-align: right;
-  padding-right: 6px;
+.edit-student-buttons button {
+  margin-left: 25px;
 }
 
-.add-student-field-line input {
-  display: inline-block;
-  width: 150px;
+.container {
+  margin-top: 30px;
 }
 
-.edit-student-field-line label {
-  display: inline-block;
-  width: 95px;
-  float: left;
-  clear: left;
-  text-align: right;
-  padding-right: 6px;
-}
-
-.edit-student-field-line input {
-  display: inline-block;
-  width: 150px;
-}
-
-input {
-  padding: 12px 15px;
-  margin-bottom: 15px;
-  display: inline-block;
-  float: left;
-  margin-left: 10px;
-  margin-right: 480px;
+a {
+  cursor: pointer;
 }
 
 input:focus {
@@ -136,152 +74,184 @@ input:focus {
 }
 
 .error-msg {
-  text-align: center;
 }
 
 .login-error-msg {
-  margin-right: 50%;
 }
 
 button {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 15px 30px;
-    margin-left: 110px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
+    height: 45px;
 }
 
-.login-info {
-  margin-left: 75px;
+.courseList button {
+  width: 15%;
+  margin-left: 42%;
 }
 
-.sign-up-button {
-  margin-top: 10px;
-  margin-left: 10%;
-  padding: 15px 15px;
-  width: 25%;
-  display: block;
+.edit-course-buttons {
+  margin-top: 20px;
+  width: 15%;
+  margin-left: 44%;
 }
 
-.sign-up h2 {
+.edit-course-buttons button {
   margin-left: 20px;
 }
 
-.signup-redirect, .login-redirect {
-  margin-top: 20px;
-  margin-left: 50px;
-
+.login-info {
 }
 
+.sign-up-button, .login-button {
+  height: 45px;
+  width: 11%;
+  margin: auto;
+  margin-top: auto;
+  margin-left: auto;
+  margin-left: 44%;
+  margin-top: 30px;
+}
 
+.student-buttons button, .confirm-buttons button {
+  margin-left: 15px;
+}
+
+.confirm-buttons {
+  margin-left: 25%;
+  margin-top: 10px;
+}
+
+.confirm-buttons button {
+  width: 20%;
+}
+
+.sign-up h2 {
+}
+
+.signup-redirect, .login-redirect {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.course-app-name {
+  display: none;
+}
+
+.mobile-header {
+  display: none;
+}
 
 .signup-redirect {
-  margin-top: 10px;
-  margin-left: 0%;
 }
 
 .getting-started {
   text-align: center;
-  font-size: 13;
+  font-size:13px;
 }
 
 .demo-account-info {
-  margin-left: 0%;
+  text-align: center;
 }
 
 .greeting {
-  margin-top: 10px;
   font-family: Arial;
   font-size: 30px;
   color:#1a1a1a;
   text-align: center;
-}
-
-.login-button {
-  margin-left: 11%;
-  margin-bottom: 10px;
   margin-top: 10px;
-  display: block;
 }
 
 .login h2 {
-  margin-left: 6%;
 }
 
 .login {
-  margin-top: 10px;
 }
 
 
-.dashboard-links li {
+li {
+  display: inline-block;
   float: right;
-  display: inline;
-  padding-right: 10px;
-  padding-top: 4px;
+  margin-left: 10px; 
 }
 
-.dashboard-links ul {
+ul {
   list-style-type: none;
-  margin: 0;
+  margin: auto;
   padding: 0;
 }
 
+.dashboard-links, .add-course-links, .course-links, .edit-course-links, .add-student-links, .edit-student-links {
+  height: 40px;
+  position: relative;
+}
+
+.course-links ul {
+ left: 67%;
+}
+
+.add-course-links ul {
+ left: 84%; 
+}
 
 .edit-course-nav-options ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  
 }
 
 .edit-course-nav-options li {
-  float: right;
-  display: inline;
-  padding-right: 10px;
-  padding-top: 4px;
+  
 }
 
 .app-name {
   font-family: Palatino;
-  float: left;
-  margin-top: 5px;
-  margin-left: 5px;
   color: black;
 }
 
 .student-app-name {
   font-family: Palatino;
-  float: left;
-  margin-top: 7px;
-  margin-left: 10px;
   color: black;
+  position: absolute;
+  vertical-align: middle;
+  top: 20%;
+  margin-left: 10px;
 }
 
-.dashboard-links, .course-page, .add-course-nav-options, .edit-course-nav-options, .add-student-nav-options, .edit-student-nav-options, .nav-options {
-  height:35px;
+.dashboard-links, .add-student-links, .course-links, .add-course-links, .edit-course-links, .edit-course-nav-options, .edit-student-links {
   background-color:beige;
-  width:100%;
   border-bottom: solid black 2px;
-  margin-bottom: 7px;
-  padding-top: 7px;
+}
+
+.edit-course-links ul {
+  left: 86%;
+}
+.add-student-links li, .dashboard-links li, .course-links li, .add-course-links li, .edit-course-links li, .edit-student-links li {
+display: inline-block;
+margin-left: 10px;
+float: right;
+margin-top: 7px;
+}
+
+.add-student-links ul, .dashboard-links ul, .course-links ul, .add-course-links ul, .edit-course-links ul, .edit-student-links ul {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.nav-options {
+  display: none;
 }
 
 .edit-student-nav-options li {
-  display: inline;
-  float: right;
-  margin-left: 7px;
-  margin-right: 10px;
-  margin-top: -18px;
+  
 }
 
 .add-course-nav-options li {
-  display: inline;
-  float: right;
-  margin-right: 10px;
-  margin-top: -10px;
+  
 }
 
 .add-course-header {
@@ -289,25 +259,26 @@ button {
 }
 
 .add-course {
-  display: block;
-  position: absolute;
-  top:50px;
-  left: -7px;
+  margin-left: 50%;
 }
 
 .edit-course-name {
-  margin-left: 3%;
-  margin-top: -30px;
+  
 }
 
-.add-course-container {
-  position: absolute;
-  left: 23%;
+.add-course-container button {
+  margin-left: 30px;
+  margin-top: 25px;
+  width: 11%;
+}
+
+.button-container {
+  margin: auto;
+  margin-left: 37%;
 }
 
 .edit-course-back {
-  margin-left: 30px;
-  display: inline-block;
+
 }
 
 .add-student-back {
@@ -316,8 +287,6 @@ button {
 }
 
 .edit-student-back {
-margin-left: 30px;
-display: inline-block;
 background-color: red;
 }
 
@@ -325,51 +294,35 @@ background-color: red;
   list-style-type: none;
 }
 
-.nav-options li {
-  display: inline;
-  float: right;
-  padding-left: 7px;
-  padding-right: 10px;
-}
-
 .course-app-name {
   font-family: Palatino;
   float: left;
-  margin-top: 0px;
-  margin-left: 10px;
   color: black;
 }
 
 .course-page h1 {
   text-align: center;
-  margin-top: 30px;
 }
 
 .studentList html {
   font-style: Arial;
-  margin-left: 275px;
 }
 
-.student-button button {
-  position: relative;
-  left: 27%;
-  display: inline;
+.student-button {
+  margin-left: 46%;
 }
 
 .course-page h2 {
-  margin-left: 560px
 }
 
 .studentList {
-  margin-left: 220px;
 }
 
 .sign-up-field-line {
-  margin-left: 70px;
 }
 
 .login-field-line {
-  margin-left: 50px;
+  
 }
 
 .student-info-box {
@@ -398,7 +351,7 @@ button:hover {
 }
 
 .student-buttons {
-  margin-right: 70px;
+  
 }
 
 .nav-options ul {
@@ -408,33 +361,23 @@ button:hover {
 }
 
 .student-name h2 {
-  text-align: center;
-  margin-top: 10px;
+  
 }
 
 .edit-course-nav-options ul {
-  list-style-type: none;
-  margin-left: 1275px;
+  
 }
 
 .edit-course-nav-options li {
-  padding-left: 7px;
-  display: inline;
-  float: right;
-  padding-right: 10px;
-  margin-top: -4px;
+  
 }
 
 
 .add-student-nav-options ul {
-  float: right;
-  list-style-type: none;
-  margin-top: -2px;
+  
 }
 .add-student-nav-options li {
-  display: inline-block;
-  margin-left: 5px;
-  margin-right: 10px;
+  
 }
 
 a {
@@ -443,34 +386,25 @@ a {
   font-family: Palatino;
 }
 
-.add-coursename-field-line {
-  text-align: center;
-  margin-right: 100px;
-}
-
 .add-course-container button {
-  margin-left: 325px;
-  margin-top: 15px;
 }
 
 .info h1 {
-  text-align: center;
   color: #1a1a1a;
-  margin-left: 46px;
-  margin: 0;
-  padding-top: 40px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .info {
-  margin: 0 auto;
+  
 }
 
 .info p {
-  margin-left: 25%;
-  margin-right: 25%;
   font-weight: bolder;
   text-align: center;
   font-style: Tahoma;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 .main-info {
@@ -480,6 +414,7 @@ a {
 .return-link {
   font-weight: bold;
   font-size: 16pt;
+  text-align: center;
 }
 
 .return-link:hover {
@@ -487,25 +422,17 @@ a {
 }
 
 .return-link {
-  text-align: center;
 }
 
 
 .courses {
-  margin-left: 690px;
-  margin-top: 0px;
 }
 
 .add-course-back {
-  display: inline-block;
-  margin-left: 840px;
-  margin-top: 65px;
 }
 
 
 .dashboard-your-courses {
-  text-align: center;
-  margin-right: 100px;
 }
 
 .dashboard-your-courses h2 {
@@ -538,11 +465,15 @@ div.confirm-buttons > button:nth-child(2) {
   padding-right: 5%;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-  font-family: Palatino;
-  font-weight: bolder;
+a, .menu li {
+  font-size: 13pt;
+  margin-left: 30px;
+  margin-bottom: 5px;
+  color: gray;
+  float: right;
+  font-family: Helvetica;
+  white-space: nowrap;
+  outline: none;
 }
 
 .return-link a {
@@ -587,6 +518,10 @@ input {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
+}
+
+h1 {
+  text-align: center;
 }
 
 button {
@@ -649,6 +584,10 @@ body, html .main {
   display: none;
 }
 
+.menu ul {
+  list-style-type: none;
+}
+
 .edit-course-form button {
   cursor: pointer;
   margin: 5px 22%;
@@ -683,7 +622,7 @@ body, html .main {
 }
 
 .submitForm {
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .field-line {
@@ -805,6 +744,15 @@ html, body {
 
 button {
   cursor: pointer;
+}
+
+.course-links, .add-student-links {
+  display:none;
+}
+
+.add-student-header {
+  text-align: center;
+  margin-top: 30px;
 }
 
 }

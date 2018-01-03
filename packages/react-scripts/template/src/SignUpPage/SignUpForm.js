@@ -14,9 +14,9 @@ const SignUpForm = (
   }
 ) => (
   <form className="pre" action="/" onSubmit={onSubmit}>
+    <h1 className="header">School Management App</h1>
+    <h2 className="sign-up">Sign Up</h2>
     <div className="container">
-      <h1 className="header">School Management App</h1>
-      <h2 className="sign-up">Sign Up</h2>
       <div className="sign-up-field-line">
         <label htmlFor="fullName">Full Name:</label>
         <input

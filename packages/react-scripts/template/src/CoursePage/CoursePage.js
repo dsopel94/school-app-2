@@ -107,91 +107,21 @@ class CoursePage extends React.Component {
       }
     });
     return (
-      <div className="course-page" main>
-        <div className="menu">
-          <Menu isOpen={false}>
-            <a
-              id="add-student"
-              className="menu-item"
-              href={`/addStudent/${this.props.match.params.cuid}`}
-            >
-              Add Student
-            </a>
-            <a
-              id="edit-course"
-              className="menu-item"
-              href={`/editCourse/${this.props.match.params.cuid}`}
-            >
-              Edit Course
-            </a>
-            <a id="back-dashboard" className="menu-item" href="/auth/dashboard">
-              Your Dashboard
-            </a>
-            <a
-              id="remove-course"
-              className="menu-item"
-              onClick={this.openModal}
-            >
-              {' '}Remove This Course{' '}
-            </a>
-            <Modal
-              isOpen={this.state.modalIsOpen}
-              onAfterOpen={this.afterOpenModal}
-              onRequestClose={this.closeModal}
-              style={customStyles}
-              contentLabel="Example Modal"
-            >
-              <div className="modal-container">
-                <h2
-                  ref={subtitle => this.subtitle = subtitle}
-                  className="warning"
-                >
-                  Warning
-                </h2>
-                <div className="confirm-msg">
-                  Are you sure you want to perform this action?
-                </div>
-                <div className="confirm-buttons">
-                  <button
-                    className="yes"
-                    className="yes"
-                    onClick={this.deleteCourse}
-                    id={this.props.id}
-                  >
-                    Yes
-                  </button>
-                  <button id="no" className="no" onClick={this.closeModal}>
-                    No
-                  </button>
-                </div>
-              </div>
-            </Modal>
-            <a id="logout" className="menu-item" href="/login">Logout</a>
-          </Menu>
-        </div>
-        <div className="mobile-header">
-          <div className="mobile-name">{this.props.course.name}</div>
-        </div>
-        <div className="nav-options">
-          <div className="course-app-name">School Management App</div>
-          <ul>
+      <div className="course-page">
+        <div className="course-links">
+          <div className="student-app-name">School Management App</div>
+          <ul className="links">
             <li>
-              <Link to="/login" onClick={this.handleLogout}>Log out </Link>
+              <a id="logout" className="menu-item" href="/login">Logout</a>
             </li>
             <li>
-              <Link to={`/addStudent/${this.props.match.params.cuid}`}>
-                Add a new Student
-              </Link>
-            </li>
-            <li>
-              <Link to={`/editCourse/${this.props.match.params.cuid}`}>
-                Edit Course Name
-              </Link>
-            </li>
-            <li>
-              <Link to="#" onClick={this.openModal}>
-                Remove this course
-              </Link>
+              <a
+                id="remove-course"
+                className="menu-item"
+                onClick={this.openModal}
+              >
+                Remove This Course
+              </a>
               <Modal
                 isOpen={this.state.modalIsOpen}
                 onAfterOpen={this.afterOpenModal}
@@ -226,16 +156,104 @@ class CoursePage extends React.Component {
               </Modal>
             </li>
             <li>
-              <Link to="/auth/dashboard" onClick={this.handleRedirect}>
-                Back to Your Dashboard
-              </Link>
+              <a
+                id="edit-course"
+                className="menu-item"
+                href={`/editCourse/${this.props.match.params.cuid}`}
+              >
+                Edit Course
+              </a>
+            </li>
+            <li>
+              <a
+                id="add-student"
+                className="menu-item"
+                href={`/addStudent/${this.props.match.params.cuid}`}
+              >
+                Add Student
+              </a>
+            </li>
+            <li>
+              <a
+                id="back-dashboard"
+                className="menu-item"
+                href="/auth/dashboard"
+              >
+                Your Dashboard
+              </a>
             </li>
           </ul>
+
+        </div>
+        <div className="mobile-header">
+          <div className="mobile-name">{this.props.course.name}</div>
+        </div>
+        <div className="menu">
+          <div className="course-app-name">School Management App</div>
+          <Menu>
+            <ul>
+              <li>
+                <Link to="/login" onClick={this.handleLogout}>Log out </Link>
+              </li>
+              <li>
+                <Link to={`/addStudent/${this.props.match.params.cuid}`}>
+                  Add Student
+                </Link>
+              </li>
+              <li>
+                <Link to={`/editCourse/${this.props.match.params.cuid}`}>
+                  Edit Course Name
+                </Link>
+              </li>
+              <li>
+                <Link to="#" onClick={this.openModal}>
+                  Remove this course
+                </Link>
+                <Modal
+                  isOpen={this.state.modalIsOpen}
+                  onAfterOpen={this.afterOpenModal}
+                  onRequestClose={this.closeModal}
+                  style={customStyles}
+                  contentLabel="Example Modal"
+                >
+                  <div className="modal-container">
+                    <h2
+                      ref={subtitle => this.subtitle = subtitle}
+                      className="warning"
+                    >
+                      Warning
+                    </h2>
+                    <div className="confirm-msg">
+                      Are you sure you want to perform this action?
+                    </div>
+                    <div className="confirm-buttons">
+                      <button
+                        className="yes"
+                        className="yes"
+                        onClick={this.deleteCourse}
+                        id={this.props.id}
+                      >
+                        Yes
+                      </button>
+                      <button id="no" className="no" onClick={this.closeModal}>
+                        No
+                      </button>
+                    </div>
+                  </div>
+                </Modal>
+              </li>
+              <li>
+                <Link to="/auth/dashboard" onClick={this.handleRedirect}>
+                  Back to Your Dashboard
+                </Link>
+              </li>
+            </ul>
+          </Menu>
         </div>
         <h1 className="course-name">{this.props.course.name}</h1>
         <div className="getting-started">
           <p>
-            Not sure how to add new students? Simply click on "Add a new Student" above to add students to your account and then click on a student's name to view their contact information.
+            Not sure how to add new students? Simply click on "Add Student" above to add students to your account and then click on a student's name to view their contact information.
             {' '}
           </p>
         </div>

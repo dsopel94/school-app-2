@@ -72,7 +72,7 @@ class AddCoursePage extends React.Component {
         <div className="mobile-header">
           <div className="mobile-name">Add a Course</div>
         </div>
-        <div className="add-course-nav-options">
+        <div className="add-course-links">
           <div className="student-app-name">School Management App</div>
           <ul>
             <li>
@@ -94,13 +94,15 @@ class AddCoursePage extends React.Component {
               onChange={this.updateName}
             />
           </div>
-          <button onClick={this.onSubmit} className="add-course">
-            Add Course
-          </button>
+          <div className="button-container">
+            <button onClick={this.onSubmit} className="add-course">
+              Add Course
+            </button>
+            <button className="add-course-back" onClick={this.handleBack}>
+              Back
+            </button>
+          </div>
         </div>
-        <button className="add-course-back" onClick={this.handleBack}>
-          Back
-        </button>
       </div>
     );
   }
