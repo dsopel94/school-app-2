@@ -45,6 +45,7 @@
     "express": "^4.15.3",
     "express-session": "^1.15.3",
     "extract-text-webpack-plugin": "^2.1.2",
+    "heroku": "^7.47.2",
     "history": "^1.17.0",
     "husky": "^0.13.2",
     "install": "^0.10.1",
